@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "to-do list",
+  "short_name": "to-dolist",
+  "start_url": "/index.html",
+  "display" : "standalone", 
+  "background_color": "#ffffff",
+  "theme_color": "#9333ea",
+  "orientation": "portrait-primary",
+  "version": "1.0",
+  "description": "Aplicacion de lista de tareas para organizar tu dia a dia",
+  "permissions": [
+    "activeTab" 
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
