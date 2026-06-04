@@ -1,6 +1,6 @@
 {
-  "name": "to-do-list-pwa",
-  "short_name": "to-dolist",
+  "name": "to-do-list",
+  "short_name": "to-do list",
   "start_url": "./index.html",  
   "display" : "standalone", 
   "background_color": "#ffffff",
