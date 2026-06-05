@@ -11,7 +11,7 @@ function guardarTareas() {
 function agregarTarea() {
 
     // Obtener el texto de la tarea
-    let nuevaTareaTexto = document.getElementById("nuevaTarea").value;
+    let nuevaTareaTexto = document.getElementById("nuevaTarea").value.trim();
 
     // Validar que no esté vacío
     if (nuevaTareaTexto === "") {
@@ -46,10 +46,11 @@ function agregarTarea() {
 }
 
 function cargarTareas() {
+
     // Obtener tareas del localStorage
     let tareas = JSON.parse(localStorage.getItem("tareas")) || [];
 
-    // recorre cada tarea almacenada
+    // Recorrer cada tarea almacenada
     tareas.forEach(texto => {
 
         let nuevaTarea = document.createElement("li");
@@ -65,10 +66,22 @@ function cargarTareas() {
 
         nuevaTarea.appendChild(botonEliminar);
 
-        // muestra cada tarea de la pagina
         document.getElementById("listaTareas").appendChild(nuevaTarea);
     });
 }
 
 // Cargar tareas al abrir la página
-cargarTareas();
+document.addEventListener("DOMContentLoaded", cargarTareas);
+
+// Registrar Service Worker para la PWA
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./service-worker.js")
+            .then(registro => {
+                console.log("Service Worker registrado:", registro);
+            })
+            .catch(error => {
+                console.log("Error al registrar Service Worker:", error);
+            });
+    });
+}
