@@ -41,7 +41,7 @@ input:focus {
     border-color: #9333ea;
 }
 
-/* estilo principal del boton */
+
 /* estilo principal del boton agregar */
 .btn-agregar {
     display: block;
@@ -56,7 +56,7 @@ input:focus {
     transition: 0.3s;
     font-weight: bold;
 }
-
+/* efecto del boton agregar */
 .btn-agregar:hover {
     background-color: #7e22ce;
     transform: scale(1.05);
@@ -67,7 +67,7 @@ button:hover {
     background-color: #7e22ce;
     transform: scale(1.05);
 }
-
+/* estilo de la lista de tareas */
 ul {
     list-style: none;
     padding: 0;
